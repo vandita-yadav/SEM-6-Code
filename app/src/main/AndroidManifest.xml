@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+<uses-permission android:name="android.permission.VIBRATE"/>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SEM6">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u1_1List_Grid"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u1_2GridExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+        <activity
+            android:name=".u1_3ScrollExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+        <activity
+            android:name=".u1_4SpinnerDropDownExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+        <activity
+            android:name=".u1_5SplashExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+
+        <activity
+            android:name=".u1_7ProgressBarActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_1IntentExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_2A_pendingIntent"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_2B_pendingIntent"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_4JobScheduler1"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_5NotificationExample"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_6DateTimePicker"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u2_7AlarmTimePicker"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u5_2MultiPermission"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u5_3RuntimePermission"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".u5_4TabPager"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+        </activity>
+
+        <activity
+            android:name=".U5_5HorizontalVerticalPager"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SEM6">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+</manifest>
