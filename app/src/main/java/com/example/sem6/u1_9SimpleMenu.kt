@@ -1,58 +1,53 @@
-/*package com.example.sem6
+package com.example.sem6
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 
-class u1_9SimpleMenu : ComponentActivity()
-{
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+class u1_9SimpleMenu : ComponentActivity() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         setContent {
             MaterialTheme {
-                menuExample()
+                SimpleMenuScreen()
             }
         }
     }
+
+
 }
 
 @Composable
 @Preview(showBackground = true)
-fun menuExample()
-{
+fun SimpleMenuScreen() {
+
+
     var expanded by remember { mutableStateOf(false) }
+    var selectedOption by remember { mutableStateOf("No option selected") }
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(20.dp)
-            .statusBarsPadding(),
+            .padding(20.dp),
         contentAlignment = Alignment.TopEnd
-    )
-    {
-        Box {
+    ) {
 
-            IconButton(onClick = { expanded = true })
-            {
-                Icon(
-                    imageVector = Icons.Default.MoreVert,
-                    contentDescription = "Menu"
-                )
+        Column(horizontalAlignment = Alignment.End) {
+
+            Button(
+                onClick = { expanded = true }
+            ) {
+                Text("Open Menu")
             }
 
             DropdownMenu(
@@ -62,29 +57,44 @@ fun menuExample()
 
                 DropdownMenuItem(
                     text = { Text("Profile") },
-                    onClick = { expanded = false }
-                )
-
-                DropdownMenuItem(
-                    text = { Text("Notifications") },
-                    onClick = { expanded = false }
+                    onClick = {
+                        selectedOption = "Profile"
+                        expanded = false
+                    }
                 )
 
                 DropdownMenuItem(
                     text = { Text("Dashboard") },
-                    onClick = { expanded = false }
+                    onClick = {
+                        selectedOption = "Dashboard"
+                        expanded = false
+                    }
                 )
 
                 DropdownMenuItem(
                     text = { Text("Settings") },
-                    onClick = { expanded = false }
+                    onClick = {
+                        selectedOption = "Settings"
+                        expanded = false
+                    }
                 )
 
                 DropdownMenuItem(
                     text = { Text("Logout") },
-                    onClick = { expanded = false }
+                    onClick = {
+                        selectedOption = "Logout"
+                        expanded = false
+                    }
                 )
             }
+
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Text(
+                text = "Selected: $selectedOption"
+            )
         }
     }
-}*/
+
+
+}

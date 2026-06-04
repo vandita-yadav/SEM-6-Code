@@ -1,4 +1,4 @@
-/*package com.example.sem6
+package com.example.sem6
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,9 +12,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-//import androidx.compose.material.icons.Icons
-//import androidx.compose.material.icons.filled.Star
-//import androidx.compose.material.icons.outlined.Star
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -75,4 +75,4 @@ fun CustomRatingBar(maxStars: Int = 5, rating:Int, onRatingChanged:(Int)->Unit)
             )
         }
     }
-}*/
+}
